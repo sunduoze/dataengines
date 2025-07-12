@@ -15,9 +15,6 @@ Random::~Random()
 
 }
 
-
-
-
 // QRegExp Separator = QRegExp("\t|\n|\r\n|\r| |,|;");
 QRegExp FrameHeaderSeparator = QRegExp(":|="); // 匹配：冒号 or 等号
 QRegExp DataSeparator = QRegExp(" |,"); // 匹配：空格 or 逗号
