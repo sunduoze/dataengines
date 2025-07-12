@@ -47,12 +47,12 @@ jobs:
       fileName: dataengines
     steps:
       - name: 查看存储库 Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
              
       - name: 安装Qt Install Qt
-        uses: jurplel/install-qt-action@v3
+        uses: jurplel/install-qt-action@v4
         with:
           version: ${{ matrix.qt_ver }}
           arch: ${{ matrix.qt_arch }}
@@ -90,7 +90,8 @@ jobs:
       - name: 上传发布 uploadRelease
         if: startsWith(github.ref, 'refs/tags/')
         # uses: softprops/action-gh-release@v1
-        uses: svenstaro/upload-release-action@v3
+        #uses: svenstaro/upload-release-action@v2
+        uses: actions/upload-release-asset@v1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ steps.package.outputs.packageName }}.zip
