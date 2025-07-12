@@ -31,7 +31,7 @@ on:
 jobs:
   build:
     name: 编译环境 Build
-    runs-on: windows-2025
+    runs-on: windows-2022
     strategy:
       matrix:
         include:
