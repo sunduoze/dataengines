@@ -31,7 +31,7 @@ on:
 jobs:
   build:
     name: 编译环境 Build
-    runs-on: windows-2019
+    runs-on: windows-2025
     strategy:
       matrix:
         include:
@@ -62,7 +62,7 @@ jobs:
         id: build
         shell: cmd
         run: |
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" ${{ matrix.msvc_arch }}
+          call "C:\Program Files (x86)\Microsoft Visual Studio\2025\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" ${{ matrix.msvc_arch }}
           qmake -makefile
           nmake
           echo winSdkDir=%WindowsSdkDir% >> %GITHUB_ENV%
