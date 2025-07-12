@@ -137,3 +137,6 @@ void loop() {
 感谢 [je00](https://github.com/je00) 创造VOFA+这个免费且功能强大的平台，方便广大爱好者高效的开发和调试！
 </br>
 感谢同事LiYang，帮忙提供了初步的插件雏形并利用Github的CI/CD来进行发布，为我打开新世界的大门！
+
+## 更新
+更新CI/CI服务器为Windows 2025
